@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICC T20 World Cup 2024 Team Selection</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #e0e0e0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    .form-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-color: #6a1b9a;
+    }
+    header img {
+        margin-right: 20px;
+    }
+    header h3 {
+        color: white;
+        margin: 0;
+    }
+    .header-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    h1 {
+        text-align: center;
+        color: #6a1b9a;
+    }
+    h3 {
+        text-align: center;
+        color: #6a1b9a;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-control {
+        margin-bottom: 10px;
+    }
+    .error {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+    }
+    .btn {
+        background-color: #6a1b9a;
+        color: white;
+    }
+    .btn:hover {
+        background-color: #5a1681;
+    }
+    .section {
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .section-team-profile {
+        background-color: #ffe6cc;
+    }
+    .section-dirty-dozen {
+        background: linear-gradient(135deg, #ffcccc, #ff9999);
+    }
+    .section-purple-cap {
+        background-color: #e6ccff;
+    }
+    .section-orange-cap {
+        background-color: #ffd9b3;
+    }
+</style>
+</head>
+<body>
+      <header>
+        <img style="float:left"src="https://images.icc-cricket.com/image/private/t_q-best/v1706276260/prd/assets/tournaments/t20worldcup/2024/t20-logo-horizontal-light.svg" alt="ICC T20 World Cup 2024 Logo" style="width: 200px;">
+        <h3>APNA WORLD CUP TEAM SELECTION</h3>
+    </header>
+  <img src="https://images.icc-cricket.com/image/upload/t_ratio21_9-size60/prd/uh7op6arhhnprscg18mv" alt="ICC T20 World Cup 2024 Banner" class="header-image">
+    <div class="form-container">
+        <form id="team-selection-form">
+          <div class="row section section-team-profile">
+            <div class="col-sm-12">
+              <h3>TEAM PROFILE</h3>
+              <p style="text-align:center">Tell us about yourself. Give a Fancy Team Name &#128520 and your friend's reference (for those additional +25points &#128521;).</p>
+            </div>
+            <div class="form-group col">
+                <label for="name">Name</label>
+                <input type="text" id="fName" name="fName" class="form-control" required>
+            </div>
+            <div class="form-group col">
+                <label for="teamName">Team Name</label>
+                <input type="text" id="teamName" name="teamName" class="form-control" required>
+            </div>
+            <div class="form-group col">
+                <label for="reference">Reference</label>
+                <input type="text" id="reference" name="reference" class="form-control">
+            </div>
+          </div>
+          <!-- Team Selection Section -->
+            <div class="section section-dirty-dozen">
+                <h3>The Dirty Dozen</h3>
+              <p style="text-align:center">Rank the <strong>TOP 3 TEAMS</strong> from each of the FOUR groups.</p>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="groupA1">Group A #1</label>
+                        <select id="groupA1" name="groupA1" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="India">India</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Canada">Canada</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="groupA2">Group A #2</label>
+                        <select id="groupA2" name="groupA2" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="India">India</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Canada">Canada</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="groupA3">Group A #3</label>
+                        <select id="groupA3" name="groupA3" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="India">India</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Canada">Canada</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="groupB1">Group B #1</label>
+                        <select id="groupB1" name="groupB1" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="England">England</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Nambia">Nambia</option>
+                            <option value="Scotland">Scotland</option>
+                            <option value="Oman">Oman</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="groupB2">Group B #2</label>
+                        <select id="groupB2" name="groupB2" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="England">England</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Nambia">Nambia</option>
+                            <option value="Scotland">Scotland</option>
+                            <option value="Oman">Oman</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="groupB3">Group B #3</label>
+                        <select id="groupB3" name="groupB3" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="England">England</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Nambia">Nambia</option>
+                            <option value="Scotland">Scotland</option>
+                            <option value="Oman">Oman</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+          <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="groupC1">Group C #1</label>
+                        <select id="groupC1" name="groupC1" class="form-control" required>
+                            <option value="">Select </option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="West Indies">West Indies</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Uganda">Uganda</option>
+                          <option value="Papua New Guinea">Papua New Guinea</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="groupC2">Group C #2</label>
+                        <select id="groupC2" name="groupC2" class="form-control" required>
+                            <option value="">Select </option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="West Indies">West Indies</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Uganda">Uganda</option>
+                          <option value="Papua New Guinea">Papua New Guinea</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="groupC3">Group C #3</label>
+                        <select id="groupC3" name="groupC3" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="West Indies">West Indies</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Uganda">Uganda</option>
+                          <option value="Papua New Guinea">Papua New Guinea</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+          <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="groupD1">Group D #1</label>
+                        <select id="groupD1" name="groupD1" class="form-control" required>
+                            <option value="">Select </option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Netherlands">Netherlands</option>
+                          <option value="Nepal">Nepal</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="groupD2">Group D #2</label>
+                        <select id="groupD2" name="groupD2" class="form-control" required>
+                            <option value="">Select </option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Netherlands">Netherlands</option>
+                          <option value="Nepal">Nepal</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="groupD3">Group D #3</label>
+                        <select id="groupD3" name="groupD3" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Netherlands">Netherlands</option>
+                          <option value="Nepal">Nepal</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- Purple Cap Section -->
+          <div class="section section-purple-cap">
+          <h3>Purple Cap</h3>
+            <p style="text-align:center">Select up to 3 Purple Cap nominees.</p>
+          <div class="row">
+            <div class="form-group col">
+                <label for="purpleCap">Nominee #1</label>
+                <input type="text" id="purpleCap1" name="purpleCap1" class="form-control" required>
+            </div>
+            <div class="form-group col">
+                <label for="purpleCap">Nominee #2</label>
+                <input type="text" id="purpleCap2" name="purpleCap2" class="form-control" required>
+            </div>
+            <div class="form-group col">
+                <label for="purpleCap">Nominee #3</label>
+                <input type="text" id="purpleCap3" name="purpleCap3" class="form-control" required>
+            </div>
+          </div>
+          </div>
+          <!-- Orange Cap Section -->
+            <div class="section section-orange-cap">
+          <h3>Orange Cap</h3>
+              <p style="text-align:center">Select up to 3 Orange Cap nominees.</p>
+          <div class="row">
+            <div class="form-group col">
+                <label for="orangeCap1">Nominee #1</label>
+                <input type="text" id="orangeCap1" name="orangeCap1" class="form-control" required>
+            </div>
+            <div class="form-group col">
+                <label for="orangeCap2">Nominee #2</label>
+                <input type="text" id="orangeCap2" name="orangeCap2" class="form-control" required>
+            </div>
+            <div class="form-group col">
+                <label for="orangeCap3">Nominee #3</label>
+                <input type="text" id="orangeCap3" name="orangeCap3" class="form-control" required>
+            </div>
+              </div>
+          </div>
+            <div id="error-message" class="error"></div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('team-selection-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            // Validation for unique team selections
+            const groupA1 = formData.get('groupA1');
+            const groupA2 = formData.get('groupA2');
+            const groupA3 = formData.get('groupA3');
+            const groupB1 = formData.get('groupB1');
+            const groupB2 = formData.get('groupB2');
+            const groupB3 = formData.get('groupB3');
+            const groupC1 = formData.get('groupC1');
+            const groupC2 = formData.get('groupC2');
+            const groupC3 = formData.get('groupC3');
+            const groupD1 = formData.get('groupD1');
+            const groupD2 = formData.get('groupD2');
+            const groupD3 = formData.get('groupD3');
+          
+
+            const teamSelections = [groupA1, groupA2, groupA3, groupB1, groupB2, groupB3,groupC1, groupC2, groupC3, groupD1, groupD2, groupD3];
+            const uniqueSelections = new Set(teamSelections);
+
+            if (uniqueSelections.size !== teamSelections.length) {
+                document.getElementById('error-message').textContent = 'Each team selection must be unique. Please select different teams.';
+                return;
+            }
+
+            document.getElementById('error-message').textContent = '';
+
+            const data = {
+              name: formData.get('fName'),  
+              teamName: formData.get('teamName'),
+              reference: formData.get('reference'),
+                groupA1: groupA1,
+                groupA2: groupA2,
+                groupA3: groupA3,
+                groupB1: groupB1,
+                groupB2: groupB2,
+                groupB3: groupB3,
+                groupC1: groupC1,
+                groupC2: groupC2,
+                groupC3: groupC3,
+                groupD1: groupD1,
+                groupD2: groupD2,
+                groupD3: groupD3,
+                purpleCap1: formData.get('purpleCap1'),
+                purpleCap2: formData.get('purpleCap2'),
+                purpleCap3: formData.get('purpleCap3'),              
+                orangeCap1: formData.get('orangeCap1'),
+                orangeCap2: formData.get('orangeCap2'),
+                orangeCap3: formData.get('orangeCap3'),
+
+            };
+
+            fetch('https://script.google.com/macros/s/AKfycbzRPinsRpH96p4Tv3o5JIKOZ3eYzO0FZKUGVfk6ifo-0F6OVL_CHl1b_MDvzwDeopGFSA/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(data)
+            })
+            .then(response => response.text())
+            .then(responseText => {
+                document.getElementById('error-message').textContent = responseText;
+            })
+            .catch(error => {
+                document.getElementById('error-message').textContent = 'Error submitting form';
+                console.error('Error:', error);
+            });
+        });
+    </script>
+  
+</body>
+</html>
