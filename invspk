@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Team Selector</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+        }
+        header {
+            background-color: #6a1b9a;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .form-section {
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        #team-name-section {
+            background-color: #ffcccc;
+        }
+
+        #wk-section {
+            background-color: #ccffcc;
+        }
+
+        #batsman-section {
+            background-color: #ccccff;
+        }
+
+        #bowler-section {
+            background-color: #ffccff;
+        }
+
+        #captain-section {
+            background-color: #ffffcc;
+        }
+      
+      #all-rounder-section {
+            background-color: #007bff;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 0.75rem;
+        }
+      .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://images.icc-cricket.com/image/private/t_q-best/v1706276260/prd/assets/tournaments/t20worldcup/2024/t20-logo-horizontal-light.svg" alt="ICC T20 World Cup 2024 Logo">
+        <h3 style="font-size:20px">APNA WORLD CUP TEAM SELECTION</h3>
+        <nav>
+            <a href="index.html">Team Selection</a>
+            <a href="invspk.html">Ind vs Pak</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h3 class="text-center my-4" style="font-size:18px"><strong>IND vs PAK TEAM SELECTION</strong></h3>
+        <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/medium/t20-world-cup-2024-india-vs-pakistan-et00400032-1717572595.jpg" class="header-image">
+<form id="team-form" class="mb-4">
+    <div id="team-name-section" class="form-section">
+        <div class="form-group">
+            <label for="teamname"><strong>Your Team Name:</strong></label>
+            <input id="teamname" name="teamname" type="text" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="team-select"><strong>Select Team</strong></label>
+            <p>You can either pre-select your team from the existing squad OR manually mix and match players from the two teams.</p>
+            <select id="team-select" name="team-select" class="form-control">
+                <option value="none">None</option>
+                <option value="India">India</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="manual">Manually Select Players</option>
+            </select>
+        </div>
+    </div>
+    <div id="wk-section" class="form-section">
+        <div class="form-group">
+            <label for="wk">Wicket Keeper:</label>
+            <input type="text" id="wk" name="wk" class="form-control autocomplete">
+        </div>
+    </div>
+    <div id="batsman-section" class="form-section">
+        <div class="form-group">
+            <label for="batsman1">Batsman 1:</label>
+            <input type="text" id="batsman1" name="batsman1" class="form-control autocomplete">
+        </div>
+        <div class="form-group">
+            <label for="batsman2">Batsman 2:</label>
+            <input type="text" id="batsman2" name="batsman2" class="form-control autocomplete">
+        </div>
+        <div class="form-group">
+            <label for="batsman3">Batsman 3:</label>
+            <input type="text" id="batsman3" name="batsman3" class="form-control autocomplete">
+        </div>
+        <div class="form-group">
+            <label for="batsman4">Batsman 4:</label>
+            <input type="text" id="batsman4" name="batsman4" class="form-control autocomplete">
+        </div>
+    </div>
+    <div class="form-section" id="all-rounder-section">
+        <div>
+            <label for="allrounder1">All-Rounder 1:</label>
+            <input type="text" id="allrounder1" name="allrounder1" class="form-control autocomplete">
+        </div>
+        <div>
+            <label for="allrounder2">All-Rounder 2:</label>
+            <input type="text" id="allrounder2" name="allrounder2" class="form-control autocomplete">
+        </div>
+    </div>
+    <div id="bowler-section" class="form-section">
+        <div class="form-group">
+            <label for="bowler1">Bowler 1:</label>
+            <input type="text" id="bowler1" name="bowler1" class="form-control autocomplete">
+        </div>
+        <div class="form-group">
+            <label for="bowler2">Bowler 2:</label>
+            <input type="text" id="bowler2" name="bowler2" class="form-control autocomplete">
+        </div>
+        <div class="form-group">
+            <label for="bowler3">Bowler 3:</label>
+            <input type="text" id="bowler3" name="bowler3" class="form-control autocomplete">
+        </div>
+        <div class="form-group">
+            <label for="bowler4">Bowler 4:</label>
+            <input type="text" id="bowler4" name="bowler4" class="form-control autocomplete">
+        </div>
+    </div>
+    <div id="captain-section" class="form-section">
+        <div class="form-group">
+            <label for="captain">Captain:</label>
+            <input type="text" id="captain" name="captain" class="form-control autocomplete">
+        </div>
+        <div class="form-group">
+            <label for="vice-captain">Vice-Captain:</label>
+            <input type="text" id="vice-captain" name="vice-captain" class="form-control autocomplete">
+        </div>
+    </div>
+    <div id="error-message" class="error"></div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const teamSelect = document.getElementById("team-select");
+    const fields = document.querySelectorAll(".autocomplete");
+    const form = document.getElementById("team-form");
+
+    const indiaSquad = {
+        bowler: ["Arshdeep Singh", "Jasprit Bumrah", "Mohd. Siraj", "Khaleel Ahmed", "Avesh Khan"],
+        batsman: ["Rohit Sharma", "Yashasvi Jaiswal", "Virat Kohli", "Suryakumar Yadav", "Shubman Gill", "Rinku Singh"],
+        wk: ["Rishabh Pant", "Sanju Samson"],
+        allRounder: ["Hardik Pandya", "Shivam Dube", "Ravindra Jadeja", "Axar Patel"],
+        reserves: ["Shubman Gill", "Rinku Singh", "Khaleel Ahmed", "Avesh Khan"]
+    };
+
+    const pakistanSquad = {
+        bowler: ["Haris Rauf", "Mohammad Abbas Afridi", "Mohammad Amir", "Naseem Shah", "Shaheen Shah Afridi"],
+        batsman: ["Babar Azam", "Fakhar Zaman", "Iftikhar Ahmed", "Saim Ayub", "Usman Khan"],
+        wk: ["Mohammad Rizwan", "Azam Khan"],
+        allRounder: ["Imad Wasim", "Shadab Khan"],
+        reserves: ["Abrar Ahmed", "Azam Khan", "Usman Khan"]
+    };
+
+    function autocomplete(inp, arr) {
+        let currentFocus;
+        inp.addEventListener("input", function (e) {
+            let a, b, i, val = this.value;
+            closeAllLists();
+            if (!val) { return false; }
+            currentFocus = -1;
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            this.parentNode.appendChild(a);
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    b = document.createElement("DIV");
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    b.addEventListener("click", function (e) {
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+            }
+        });
+        inp.addEventListener("keydown", function (e) {
+            let x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                currentFocus++;
+                addActive(x);
+            } else if (e.keyCode == 38) {
+                currentFocus--;
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    if (x) x[currentFocus].click();
+                }
+            }
+        });
+        function addActive(x) {
+            if (!x) return false;
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+            for (let i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+        function closeAllLists(elmnt) {
+            let x = document.getElementsByClassName("autocomplete-items");
+            for (let i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+    }
+
+    function setFields(players, team, setCaptains = true) {
+        const playerFields = [
+            { field: "wk", value: players.wk[0] },
+            { field: "batsman1", value: players.batsman[0] },
+            { field: "batsman2", value: players.batsman[1] },
+            { field: "batsman3", value: players.batsman[2] },
+            { field: "batsman4", value: players.batsman[3] },
+            { field: "allrounder1", value: players.allRounder[0] },
+            { field: "allrounder2", value: players.allRounder[1] },
+            { field: "bowler1", value: players.bowler[0] },
+            { field: "bowler2", value: players.bowler[1] },
+            { field: "bowler3", value: players.bowler[2] },
+            { field: "bowler4", value: players.bowler[3] },
+        ];
+
+        playerFields.forEach(({ field, value }) => {
+            const fieldElement = document.getElementById(field);
+            fieldElement.value = value;
+        });
+
+        if (setCaptains) {
+            const captainField = document.getElementById("captain");
+            const viceCaptainField = document.getElementById("vice-captain");
+            captainField.disabled = false;
+            viceCaptainField.disabled = false;
+            autocomplete(captainField, players.wk.concat(players.batsman, players.allRounder, players.bowler));
+            autocomplete(viceCaptainField, players.wk.concat(players.batsman, players.allRounder, players.bowler));
+        }
+    }
+
+    teamSelect.addEventListener("change", (event) => {
+        const selectedTeam = event.target.value;
+        const captainField = document.getElementById("captain");
+        const viceCaptainField = document.getElementById("vice-captain");
+
+        if (selectedTeam === "India") {
+            setFields(indiaSquad, selectedTeam);
+        } else if (selectedTeam === "Pakistan") {
+            setFields(pakistanSquad, selectedTeam);
+        } else if (selectedTeam === "manual") {
+            fields.forEach(field => field.value = "");
+            captainField.disabled = false;
+            viceCaptainField.disabled = false;
+
+            fields.forEach(field => {
+                const position = field.id;
+                let players;
+                if (position.includes("batsman")) {
+                    players = indiaSquad.batsman.concat(pakistanSquad.batsman);
+                } else if (position.includes("bowler")) {
+                    players = indiaSquad.bowler.concat(pakistanSquad.bowler);
+                } else if (position.includes("allrounder")) {
+                    players = indiaSquad.allRounder.concat(pakistanSquad.allRounder);
+                } else if (position.includes("wk")) {
+                    players = indiaSquad.wk.concat(pakistanSquad.wk);
+                }
+                autocomplete(field, players);
+            });
+
+            autocomplete(captainField, indiaSquad.wk.concat(indiaSquad.batsman, indiaSquad.allRounder, indiaSquad.bowler, pakistanSquad.wk, pakistanSquad.batsman, pakistanSquad.allRounder, pakistanSquad.bowler));
+            autocomplete(viceCaptainField, indiaSquad.wk.concat(indiaSquad.batsman, indiaSquad.allRounder, indiaSquad.bowler, pakistanSquad.wk, pakistanSquad.batsman, pakistanSquad.allRounder, pakistanSquad.bowler));
+        } else {
+            fields.forEach(field => field.value = "");
+            captainField.disabled = true;
+            viceCaptainField.disabled = true;
+        }
+    });
+
+    function createLabelWithImage(name) {
+        const imageURL = `https://via.placeholder.com/30?text=${name.charAt(0)}`;
+        return `<div class="player-label"><img src="${imageURL}" alt="${name}">${name}</div>`;
+    }
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const data = new FormData(form);
+        const selectedPlayers = [];
+        let errorMessage = "";
+
+        // Check for duplicate players (excluding captain and vice-captain)
+        for (let [key, value] of data.entries()) {
+            if (key.startsWith("batsman") || key.startsWith("bowler") || key.startsWith("allrounder") || key.startsWith("wk")) {
+                if (selectedPlayers.includes(value)) {
+                    errorMessage = "Can't select same player twice. Please choose a unique player.";
+                    break;
+                }
+                selectedPlayers.push(value);
+            }
+        }
+
+        if (errorMessage) {
+            document.getElementById('error-message').textContent = errorMessage;
+            return;
+        }
+
+        // Ensure captain and vice-captain are from the selected players
+        const captain = data.get("captain");
+        const viceCaptain = data.get("vice-captain");
+
+        if (!selectedPlayers.includes(captain) || !selectedPlayers.includes(viceCaptain)) {
+            document.getElementById('error-message').textContent = 'Captain and Vice-Captain must be selected from the chosen players.';
+            return;
+        }
+
+        fetch('https://script.google.com/macros/s/AKfycbz9zT_iVyIC8zXGVnwSvRAYAik6FVd0i9N6nF_PUNqssUVu8XTlPdw7Hm5VHSGJDiBNAg/exec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams(data)
+        })
+        .then(response => response.text())
+        .then(text => {
+            if (text.includes("Success")) {
+                document.getElementById('error-message').textContent = "Team Successfully Submitted.";
+            } else {
+                throw new Error(text);
+            }
+        }).catch(error => {
+            document.getElementById('error-message').textContent = 'Error submitting form: ' + error.message;
+            console.error('Error:', error);
+        });
+    });
+});
+
+
+    </script>
+</body>
+</html>
